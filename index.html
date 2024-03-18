@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Gen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://emojifavicon.dev/favicons/1f510.ico" />
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>password generator</h1>
+
+            <div id="passwordLengthDiv">
+                <label for="passwordLengthRange">Password Length: <span id="passwordLengthValue">12</span>
+                </label>
+                <br>
+                <input type="range" id="passwordLengthRange" min="5" max="30" value="13">
+            </div>
+
+            <br>
+
+            <div id="selectorsDiv">
+                <label>Lower Case</label>
+                <input type="checkbox" name="includeLowerCase" id="includeLowerCase" class="checkbox">
+
+                <label>Upper Case</label>
+                <input type="checkbox" name="includeUpperCase" id="includeUpperCase" class="checkbox">
+
+                <label>Include Numbers</label>
+                <input type="checkbox" name="includeNumbers" id="includeNumbers" class="checkbox">
+
+                <label>Include Symbols</label>
+                <input type="checkbox" name="includeSymbols" id="includeSymbols" class="checkbox">
+            </div>
+
+            <button  
+            id="submitbutton"
+            onclick="generateAndDisplayPassword()">Generate Password</button>
+            <p id="generatedPassword"></p>
+
+        </div>
+    </main>
+</body>
+
+</html>
